@@ -17,12 +17,6 @@
     "url": "https://github.com/Elevationacademy/userPage-API-Project-Instructor/issues"
   },
   "homepage": "https://github.com/Elevationacademy/userPage-API-Project-Instructor#readme",
-  "devDependencies": {
-    "css-loader": "^5.0.1",
-    "style-loader": "^2.0.0",
-    "webpack": "^5.10.1",
-    "webpack-cli": "^4.2.0"
-  },
   "dependencies": {
     "handlebars": "^4.7.6",
     "jquery": "^3.5.1"
