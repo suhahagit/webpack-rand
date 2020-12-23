@@ -1,4 +1,6 @@
-
+import Renderer from './Renderer'
+import APIManager from './APIManager'
+import './style.css';
 
 const renderer = new Renderer()
 const apiManager = new APIManager()

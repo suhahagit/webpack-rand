@@ -1,36 +1,32 @@
+const userTemplate = require("./templates/user.handlebars");
+const quoteTemplate = require("./templates/quote.handlebars");
+const pokemonTemplate = require("./templates/pokemon.handlebars");
+const meatTemplate = require("./templates/meat.handlebars");
+const friendsTemplate = require("./templates/friends.handlebars");
+
 class Renderer {
     renderUsers(users) {
-        let source = $("#user-template").html()
-        let template = Handlebars.compile(source)
-        let newHTML = template(users.results[0]);
+        let newHTML = userTemplate(users.results[0]);
         $(".user-container").empty().append(newHTML);
     }
 
     renderFriends(users) {
-        let sourceFriends = $("#user-friends-template").html()
-        let templateFriends = Handlebars.compile(sourceFriends)
-        let friendsHTML = templateFriends({friends: users.results.splice(1)})
+        let friendsHTML = friendsTemplate({friends: users.results.splice(1)})
         $(".friends-container").empty().append(friendsHTML)
     }
 
     renderQuote(quoteInfo) {
-        let sourceQuote = $("#quote-template").html()
-        let templateQuote = Handlebars.compile(sourceQuote)
-        let quoteHTML = templateQuote(quoteInfo)
+        let quoteHTML = quoteTemplate(quoteInfo)
         $(".quote-container").empty().append(quoteHTML)
     }
 
     renderPokemon(pokemonInfo) {
-        let sourcePokemon = $("#pokemon-template").html()
-        let templatePokemon = Handlebars.compile(sourcePokemon)
-        let pokemonHTML = templatePokemon(pokemonInfo)
+        let pokemonHTML = pokemonTemplate(pokemonInfo)
         $(".pokemon-container").empty().append(pokemonHTML)
     }
 
     renderMeat(meatText) {
-        let sourceMeat = $("#meat-template").html()
-        let templateMeat = Handlebars.compile(sourceMeat)
-        let meatHTML = templateMeat({text: meatText})
+        let meatHTML = meatTemplate({text: meatText})
         $(".meat-container").empty().append(meatHTML)
     }
 
@@ -42,3 +38,5 @@ class Renderer {
         this.renderMeat(data.meat)
     }
 }
+
+export default Renderer

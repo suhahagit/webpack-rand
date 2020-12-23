@@ -29,45 +29,6 @@
         </div>
     </div>
 
-    <!-- ------------------------------- -->
-    <script id="user-template" type="text/x-handlebars-template">
-        <div id = "profile-pic" style = "background-image: url({{picture.medium}})"></div>
-        <div class="user-info">
-            <div>{{name.first}} {{name.last}}</div>
-            <div>{{location.city}}, {{location.state}}</div>
-        </div>
-    </script>
-    <!-- ----------------------------------------------------->
-    <script id="user-friends-template" type="text/x-handlebars-template">
-        <ul class="user-friends">
-            {{#each friends}}
-            <li>{{this.name.first}} {{this.name.last}}</li> <br>
-            {{/each}}
-        </ul>
-    </script>
-    <!-- ---------------------------------------------------- -->
-    <script id="pokemon-template" type="text/x-handlebars-template">
-            <span id = "pokemon-image" style = "background-image: url({{sprites.front_default}})"></span>
-            <span id= "pokemon-text">Favorite Pokemon: {{name}}</span>
-    </script>
-    <!-- ------------------------------------------------------ -->
-    <script id="meat-template" type="text/x-handlebars-template">
-        <div class="meat-text">
-                <p>About me:</p>
-                {{text}}
-        </div>
-    </script>
-    <!-- ------------------------------------------------------ -->
-    <script id="quote-template" type="text/x-handlebars-template">
-        <p>Favorite quote:</p>
-        <span><i>"{{quote}}"</i> <br>
-            - {{author}}</span>
-    </script>
-    <!-- ------------------------------------------------------ -->
-
-    <script src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
     <script src="main.js"></script>
 </body>
 
